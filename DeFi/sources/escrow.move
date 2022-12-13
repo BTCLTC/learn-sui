@@ -49,7 +49,7 @@ module defi::escrow {
     }
 
     /// Trusted third party can swap compatible objects
-    public entry fun swap<T1: key + store, T2: key + strore>(
+    public entry fun swap<T1: key + store, T2: key + store>(
         obj1: EscrowedObj<T1, T2>,
         obj2: EscrowedObj<T2, T1>
     ) {
