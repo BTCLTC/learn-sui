@@ -1,8 +1,8 @@
 #[test_only]
 module defi::flash_lender_tests {
     use defi::flash_lender::{Self, AdminCap, FlashLender};
-    use sui::pay;
     use sui::coin;
+    use sui::pay;
     use sui::sui::SUI;
     use sui::test_scenario;
 

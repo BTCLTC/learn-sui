@@ -1,9 +1,8 @@
 #[test_only]
 module defi::escrow_tests {
+    use defi::escrow::{Self, EscrowedObj};
     use sui::object::{Self, UID};
     use sui::test_scenario::{Self, Scenario};
-
-    use defi::escrow::{Self, EscrowedObj};
 
     const ALICE_ADDRESS: address = @0xACE;
     const BOB_ADDRESS: address = @0xACEB;

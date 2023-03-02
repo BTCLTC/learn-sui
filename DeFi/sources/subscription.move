@@ -1,7 +1,7 @@
 module defi::subscription {
-    use sui::tx_context::TxContext;
     use sui::object::{Self, UID};
     use sui::transfer;
+    use sui::tx_context::TxContext;
 
     /// For when subscription object no longer has uses.
     const ENoUses: u64 = 0;
@@ -13,9 +13,7 @@ module defi::subscription {
     }
 
     /// A single use potato to authorize actions
-    struct SingleUse<phantom T> {
-
-    }
+    struct SingleUse<phantom T> {}
 
     // ========= Default Functions =========
 
@@ -60,7 +58,7 @@ module defi::subscription {
     /// Implementable by an external module with a witness parameter T. Confirmation is only
     /// available if the third party implements it and recognizes the use.
     public fun confirm_use<T: drop>(_w: T, pass: SingleUse<T>) {
-        let SingleUse {  } = pass;
+        let SingleUse {} = pass;
     }
 
     /// Allow applications customize transferability of the `Subscription`.
