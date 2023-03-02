@@ -1,5 +1,5 @@
 #[test_only]
-module defi::shared_escrow_test {
+module defi::shared_escrow_tests {
     use defi::shared_escrow::{Self, EscrowedObj};
     use sui::object::{Self, UID};
     use sui::test_scenario::{Self, Scenario};
