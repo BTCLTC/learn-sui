@@ -39,7 +39,7 @@ module basics::lock_tests {
         // User2 is impatient and he decides to take the treasure.
         test_scenario::next_tx(scenario, user2);
         {
-            let lock_val = test_scenario::take_from_sender<Lock<Treasure>>(scenario);
+            let lock_val = test_scenario::take_shared<Lock<Treasure>>(scenario);
             let lock = &mut lock_val;
             let key = test_scenario::take_from_sender<Key<Treasure>>(scenario);
             let ctx = test_scenario::ctx(scenario);

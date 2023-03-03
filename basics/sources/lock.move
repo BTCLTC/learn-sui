@@ -62,7 +62,7 @@ module basics::lock {
     /// Can only be called if both conditions are met:
     /// - key matches the lock
     /// - lock is not empty
-    public entry fun unlock<T: store + key>(lock: &mut Lock<T>, key: &Key<T>): T {
+    public fun unlock<T: store + key>(lock: &mut Lock<T>, key: &Key<T>): T {
         assert!(option::is_some(&lock.locked), ELockIsEmpty);
         assert!(&key.for == object::borrow_id(lock), EKeyMismatch);
 
