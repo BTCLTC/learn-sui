@@ -1,7 +1,7 @@
 #[test_only]
 module basics::counter_tests {
-    use sui::test_scenario;
     use basics::counter;
+    use sui::test_scenario;
 
     #[test]
     fun test_counter() {

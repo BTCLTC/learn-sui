@@ -1,9 +1,7 @@
 module basics::counter {
-    use sui::object::UID;
-    use sui::tx_context::TxContext;
+    use sui::object::{Self, UID};
     use sui::transfer;
-    use sui::object;
-    use sui::tx_context;
+    use sui::tx_context::{Self, TxContext};
 
     /// A shared counter.
     struct Counter has key {
