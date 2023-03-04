@@ -1,10 +1,8 @@
 module basics::object_basics {
-    use sui::object::UID;
-    use sui::tx_context::TxContext;
-    use sui::transfer;
-    use sui::object;
     use sui::event;
-    use sui::tx_context;
+    use sui::object::{Self, UID};
+    use sui::transfer;
+    use sui::tx_context::{Self, TxContext};
 
     struct Object has key, store {
         id: UID,

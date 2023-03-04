@@ -1,9 +1,7 @@
 module basics::object {
-    use sui::object::UID;
+    use sui::object::{Self, UID};
     use sui::transfer;
-    use sui::tx_context::TxContext;
-    use sui::object;
-    use sui::tx_context;
+    use sui::tx_context::{Self, TxContext};
 
     /// A custom sui object. Every object must have the `key` attribute
     /// (indicating that it is allowed to be a key in the sui global object
